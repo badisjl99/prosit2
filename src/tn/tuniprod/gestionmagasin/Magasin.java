@@ -12,6 +12,7 @@ public class Magasin {
 
     private static final int MAX_PRODUITS = 50;
 
+
     public Magasin(int id, String adresse, int capacite) {
         this.id = id;
         this.adresse = adresse;
@@ -73,4 +74,23 @@ public class Magasin {
             System.out.println("Le magasin avec l'adresse "+m1.adresse + " est égale à " + m2.adresse);
         }
     }
+
+    public void supprimerProduit(Produit p) {
+        if(p == null){
+            System.out.println("produit non trouvé ");
+        }
+        for (int i = 0; i < nbrProduits; i++) {
+            if (produits[i].equals(p)) {
+                for (int j = i; j < nbrProduits - 1; j++) {
+                    produits[j] = produits[j + 1];
+                }
+                produits[nbrProduits - 1] = null;
+                nbrProduits--;
+                System.out.println("produit supprimé");
+                return;
+            }
+        }
+
+    }
+
 }

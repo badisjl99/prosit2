@@ -24,6 +24,7 @@ public class Main {
         System.out.println("Nombre total de produits dans tous les magasins : " + gestionMagasins.getTotalProduits());
 
         magasin1.maxMagasin(magasin1,magasin2);
+        magasin1.supprimerProduit(produit1);
 
 
     }
